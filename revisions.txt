@@ -1,0 +1,3 @@
+1---isolate pages ,images,and other aspects in folders
+2----need dynamic pages ,if the data doesn't come dynamically then it shouldn't it should come from static data (JSON FILE)
+3---make reusable functions and call them instead of doing everything  in one place, seperate logics ,one file/function should do only one thing
