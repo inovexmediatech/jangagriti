@@ -6,6 +6,6 @@ Open `new.html` (or `index.html`) in a browser to view the site. All dynamic beh
 
 - Facilities and events are provided as local data
 - Gallery uploads are handled client-side (in-memory) and do not persist to disk
-- Contact form opens the user's email client via `mailto:`
+- Contact form opens the user's email ccclient via `mailto:`
 
 To run locally, open the HTML file in your browser or use a simple static server such as `npx serve`.
