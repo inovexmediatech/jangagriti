@@ -1,337 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Janajagriti Boarding School - Excellence in Education</title>
-<meta http-equiv="refresh" content="0;url=new.html" />
-<!-- redirect to updated version -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Jana Jagriti Secondary Schoo - Excellence in Education</title>
+    <meta http-equiv="refresh" content="0;url=new.html" />
+    <!-- redirect to updated version -->
 
-<!-- Modern Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Modern Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
+    <style>
+      /* ================= GLOBAL ================= */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-/* ================= GLOBAL ================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+      body {
+        font-family: "Poppins", sans-serif;
+        background: url("school.jpg") center/cover fixed;
+        color: #333;
+      }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:url('image.jpg') center/cover fixed;
-    color:#333;
-}
+      .overlay {
+        background: rgba(0, 20, 40, 0.85);
+        min-height: 100vh;
+      }
 
-.overlay{
-    background:rgba(0,20,40,0.85);
-    min-height:100vh;
-}
+      /* ================= SIDEBAR ================= */
+      nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 240px;
+        height: 100vh;
+        background: linear-gradient(180deg, #002855, #001933);
+        padding-top: 2rem;
+        z-index: 1000;
+      }
 
-/* ================= SIDEBAR ================= */
-nav{
-    position:fixed;
-    left:0;
-    top:0;
-    width:240px;
-    height:100vh;
-    background:linear-gradient(180deg,#002855,#001933);
-    padding-top:2rem;
-    z-index:1000;
-}
+      nav ul {
+        list-style: none;
+      }
 
-nav ul{list-style:none;}
+      nav li {
+        margin: 1rem 0;
+      }
 
-nav li{margin:1rem 0;}
+      nav a {
+        display: block;
+        color: #e3f2fd;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
 
-nav a{
-    display:block;
-    color:#e3f2fd;
-    text-decoration:none;
-    padding:1rem 2rem;
-    border-radius:8px;
-    transition:0.3s;
-}
+      nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(12px);
+      }
 
-nav a:hover{
-    background:rgba(255,255,255,0.1);
-    transform:translateX(12px);
-}
+      /* ================= MAIN ================= */
+      main {
+        margin-left: 240px;
+        padding: 2rem;
+      }
 
-/* ================= MAIN ================= */
-main{
-    margin-left:240px;
-    padding:2rem;
-}
+      /* ================= HEADER ================= */
+      header {
+        background: linear-gradient(135deg, #0066ff, #00c6ff);
+        padding: 3rem 2rem;
+        text-align: center;
+        color: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 123, 255, 0.3);
+        margin-bottom: 2rem;
+      }
 
-/* ================= HEADER ================= */
-header{
-    background:linear-gradient(135deg,#0066ff,#00c6ff);
-    padding:3rem 2rem;
-    text-align:center;
-    color:white;
-    border-radius:20px;
-    box-shadow:0 20px 50px rgba(0,123,255,0.3);
-    margin-bottom:2rem;
-}
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
 
-header h1{
-    font-size:2.5rem;
-    margin-bottom:0.5rem;
-}
+      /* ================= SECTIONS ================= */
+      section {
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
 
-/* ================= SECTIONS ================= */
-section{
-    padding:3rem;
-    background:rgba(255,255,255,0.85);
-    border-radius:20px;
-    margin-bottom:2rem;
-    backdrop-filter:blur(12px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
+      section:hover {
+        transform: translateY(-5px);
+      }
 
-section:hover{
-    transform:translateY(-5px);
-}
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #004085;
+      }
 
-h2{
-    text-align:center;
-    margin-bottom:2rem;
-    color:#004085;
-}
+      /* ================= GRID ================= */
+      .facilities-grid,
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
 
-/* ================= GRID ================= */
-.facilities-grid,
-.events-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:1.5rem;
-}
+      .facility,
+      .event {
+        background: #f8f9ff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
+      }
 
-.facility,
-.event{
-    background:#f8f9ff;
-    padding:1.5rem;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
+      .facility:hover,
+      .event:hover {
+        transform: translateY(-8px);
+      }
 
-.facility:hover,
-.event:hover{
-    transform:translateY(-8px);
-}
+      /* ================= GALLERY ================= */
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+      }
 
-/* ================= GALLERY ================= */
-.gallery-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:2rem;
-}
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+      }
 
-.gallery-item{
-    position:relative;
-    overflow:hidden;
-    border-radius:20px;
-    cursor:pointer;
-    box-shadow:0 15px 35px rgba(0,0,0,0.2);
-    transition:0.4s;
-}
+      .gallery-item img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        transition: 0.6s;
+      }
 
-.gallery-item img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    transition:0.6s;
-}
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.85rem; /* smaller manageable font */
+        text-align: center;
+        color: white;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      }
 
-.gallery-caption{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:0.6rem;
-    font-size:0.85rem;   /* smaller manageable font */
-    text-align:center;
-    color:white;
-    background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);
-}
+      .gallery-item:hover {
+        transform: translateY(-12px) scale(1.03);
+      }
 
-.gallery-item:hover{
-    transform:translateY(-12px) scale(1.03);
-}
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
 
-.gallery-item:hover img{
-    transform:scale(1.1);
-}
+      /* ================= LIGHTBOX ================= */
+      #lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
 
-/* ================= LIGHTBOX ================= */
-#lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.9);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
-}
+      #lightbox img {
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 15px;
+      }
 
-#lightbox img{
-    max-width:80%;
-    max-height:80%;
-    border-radius:15px;
-}
+      #closeBtn {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        font-size: 2.5rem;
+        color: white;
+        cursor: pointer;
+      }
 
-#closeBtn{
-    position:absolute;
-    top:30px;
-    right:50px;
-    font-size:2.5rem;
-    color:white;
-    cursor:pointer;
-}
+      /* ================= CONTACT ================= */
+      .contact {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        text-align: center;
+      }
 
-/* ================= CONTACT ================= */
-.contact{
-    background:linear-gradient(135deg,#007BFF,#0056b3);
-    color:white;
-    text-align:center;
-}
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: white;
+      }
 
-footer{
-    text-align:center;
-    padding:2rem;
-    color:white;
-}
+      /* ================= RESPONSIVE ================= */
+      @media (max-width: 1024px) {
+        nav {
+          display: none;
+        }
+        main {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:1024px){
-    nav{display:none;}
-    main{margin-left:0;}
-}
+  <body>
+    <div class="overlay">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#history">Our Journey</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-</style>
-</head>
+      <main>
+        <header>
+          <h1>Shree Jana Jagriti Secondary Schoo</h1>
+          <p>Government Excellence | Holistic Education | Cultural Pride</p>
+        </header>
 
-<body>
-<div class="overlay">
+        <section id="home">
+          <h2>Welcome</h2>
+          <p>
+            Empowering students with quality education rooted in Nepali values
+            since 2029 B.S.
+          </p>
+        </section>
 
-<nav>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#history">Our Journey</a></li>
-<li><a href="#facilities">Facilities</a></li>
-<li><a href="#events">Events</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+        <section id="history">
+          <h2>Our Journey</h2>
+          <p>
+            Started under a banyan tree and now a respected government
+            institution known for academic excellence and character development.
+          </p>
+        </section>
 
-<main>
+        <section id="facilities">
+          <h2>Facilities</h2>
+          <div class="facilities-grid">
+            <div class="facility">
+              <h3>Classrooms</h3>
+              <p>Well ventilated modern classrooms.</p>
+            </div>
+            <div class="facility">
+              <h3>Science Labs</h3>
+              <p>Physics, Chemistry & Biology labs.</p>
+            </div>
+            <div class="facility">
+              <h3>Computer Lab</h3>
+              <p>Digital literacy & IT education.</p>
+            </div>
+            <div class="facility">
+              <h3>Library</h3>
+              <p>Books & reading resources.</p>
+            </div>
+          </div>
+        </section>
 
-<header>
-<h1>Shree Janajagriti Boarding School</h1>
-<p>Government Excellence | Holistic Education | Cultural Pride</p>
-</header>
+        <section id="events">
+          <h2>Events</h2>
+          <div class="events-grid">
+            <div class="event"><h3>Sports Week</h3></div>
+            <div class="event"><h3>Annual Day</h3></div>
+            <div class="event"><h3>Festivals</h3></div>
+            <div class="event"><h3>Educational Tours</h3></div>
+          </div>
+        </section>
 
-<section id="home">
-<h2>Welcome</h2>
-<p>Empowering students with quality education rooted in Nepali values since 2029 B.S.</p>
-</section>
+        <section id="gallery">
+          <h2>Gallery</h2>
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="dance.jpg" />
+              <div class="gallery-caption">Cultural Program</div>
+            </div>
+            <div class="gallery-item">
+              <img src="sports.jpg" />
+              <div class="gallery-caption">Sports Week</div>
+            </div>
+            <div class="gallery-item">
+              <img src="comp.jpg" />
+              <div class="gallery-caption">Computer Lab</div>
+            </div>
+            <div class="gallery-item">
+              <img src="edu.jpg" />
+              <div class="gallery-caption">Educational Tour</div>
+            </div>
+          </div>
+        </section>
 
-<section id="history">
-<h2>Our Journey</h2>
-<p>Started under a banyan tree and now a respected government institution known for academic excellence and character development.</p>
-</section>
+        <div id="lightbox">
+          <span id="closeBtn">&times;</span>
+          <img id="lightbox-img" />
+        </div>
 
-<section id="facilities">
-<h2>Facilities</h2>
-<div class="facilities-grid">
-<div class="facility"><h3>Classrooms</h3><p>Well ventilated modern classrooms.</p></div>
-<div class="facility"><h3>Science Labs</h3><p>Physics, Chemistry & Biology labs.</p></div>
-<div class="facility"><h3>Computer Lab</h3><p>Digital literacy & IT education.</p></div>
-<div class="facility"><h3>Library</h3><p>Books & reading resources.</p></div>
-</div>
-</section>
+        <section id="contact" class="contact">
+          <h2>Contact Us</h2>
+          <p>Email: janajagriti@gmail.com | Tel: 071-437230</p>
+        </section>
 
-<section id="events">
-<h2>Events</h2>
-<div class="events-grid">
-<div class="event"><h3>Sports Week</h3></div>
-<div class="event"><h3>Annual Day</h3></div>
-<div class="event"><h3>Festivals</h3></div>
-<div class="event"><h3>Educational Tours</h3></div>
-</div>
-</section>
+        <footer>
+          <p>&copy; 2026 Shree Jana Jagriti Secondary Schoo</p>
+        </footer>
+      </main>
+    </div>
 
-<section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery-container">
-<div class="gallery-item">
-<img src="dance.jpg">
-<div class="gallery-caption">Cultural Program</div>
-</div>
-<div class="gallery-item">
-<img src="sports.jpg">
-<div class="gallery-caption">Sports Week</div>
-</div>
-<div class="gallery-item">
-<img src="comp.jpg">
-<div class="gallery-caption">Computer Lab</div>
-</div>
-<div class="gallery-item">
-<img src="edu.jpg">
-<div class="gallery-caption">Educational Tour</div>
-</div>
-</div>
-</section>
+    <script>
+      /* Smooth Scroll */
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
 
-<div id="lightbox">
-<span id="closeBtn">&times;</span>
-<img id="lightbox-img">
-</div>
+      /* Lightbox */
+      const images = document.querySelectorAll(".gallery-item img");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const closeBtn = document.getElementById("closeBtn");
 
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<p>Email: janajagriti@gmail.com | Tel: 071-437230</p>
-</section>
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+        });
+      });
 
-<footer>
-<p>&copy; 2026 Shree Janajagriti Boarding School</p>
-</footer>
-
-</main>
-</div>
-
-<script>
-
-/* Smooth Scroll */
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-anchor.addEventListener('click',function(e){
-e.preventDefault();
-document.querySelector(this.getAttribute('href'))
-.scrollIntoView({behavior:'smooth'});
-});
-});
-
-/* Lightbox */
-const images=document.querySelectorAll('.gallery-item img');
-const lightbox=document.getElementById('lightbox');
-const lightboxImg=document.getElementById('lightbox-img');
-const closeBtn=document.getElementById('closeBtn');
-
-images.forEach(img=>{
-img.addEventListener('click',()=>{
-lightbox.style.display='flex';
-lightboxImg.src=img.src;
-});
-});
-
-closeBtn.onclick=()=>lightbox.style.display='none';
-
-</script>
-
-</body>
+      closeBtn.onclick = () => (lightbox.style.display = "none");
+    </script>
+  </body>
 </html>
